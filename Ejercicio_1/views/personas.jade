@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  h2 Personas
+  table
+      thead
+          tr
+            th BusinessEntityID
+            th PersonType
+            th NameStyle
+            th FirstName
+            th MiddleName
+            th LastName
+            th EmailPromotion
+      tbody
+        each persona in personas 
+          tr
+            td #{persona.BusinessEntityID}
+            td #{persona.PersonType}
+            td #{persona.NameStyle}
+            td #{persona.FirstName}
+            td #{persona.MiddleName}
+            td #{persona.LastName}
+            td #{persona.EmailPromotion}
+

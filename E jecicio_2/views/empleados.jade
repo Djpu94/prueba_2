@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  h2 Direcciones
+  table
+      thead
+          tr
+            th AddressID
+            th AddressLine1
+            th AddressLine2
+            th City
+            th StateProvinceID
+            th PostalCode
+      tbody
+        each empleado in empleados
+          tr
+            td #{empleado.BusinessEntityID}
+            td #{empleado.NationalIDNumber}
+            td #{empleado.LoginID}
+            td #{empleado.OrganizationNode}
+            td #{empleado.OrganizationLevel}
+            td #{empleado.JobTitle}
+            td #{empleado.BirthDate}
+            td #{empleado.MaritalStatus}
+            td #{empleado.Gender}
+            td #{empleado.HireDate}
+            td #{empleado.SalariedFlag}
+            td #{empleado.VacationHours}
+            td #{empleado.SickLeaveHours}
+            td #{empleado.CurrentFlag}
+            td #{empleado.rowguid}
+            td #{empleado.ModifiedDate}

@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+   PostalCode
+    form(for = 'name' method='POST' action='/direcciones')
+        div.form-group
+            label(for='AddressID') AddressID: 
+                input#AddressID.form-control(type="text", placeholder='AddressID', name='AddressID')
+        div.form-group
+            label(for='AddressLine1') AddressLine1: 
+                input#AddressLine1.form-control(type="text", placeholder='AddressLine1', name='AddressLine1')
+        div.form-group
+            label(for='AddressLine2') AddressLine2: 
+                input#AddressLine2.form-control(type="text", placeholder='AddressLine2', name='AddressLine2')
+        div.form-group
+            label(for='City')  City: 
+                input#City.form-control(type="text", placeholder='City', name='City')
+        div.form-group
+            label(for='StateProvinceID') StateProvinceID: 
+                input#StateProvinceID.form-control(type="text", placeholder='StateProvinceID', name='StateProvinceID')
+        div.form-group
+            label(for='PostalCode') PostalCode: 
+                input#PostalCode.form-control(type="text", placeholder='PostalCode', name='PostalCode')
+        
+        button.btn.btn-primary(type="submit", name="Grabar") Grabar

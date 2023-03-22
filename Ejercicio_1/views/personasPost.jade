@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+    form(for = 'name' method='POST' action='/direcciones')
+        div.form-group
+            label(for='BusinessEntityID') BusinessEntityID: 
+                input#BusinessEntityID.form-control(type="text", placeholder='BusinessEntityID', name='BusinessEntityID')
+        div.form-group
+            label(for='PersonType') PersonType: 
+                input#PersonType.form-control(type="text", placeholder='PersonType', name='PersonType')
+        div.form-group
+            label(for='NameStyle') NameStyle: 
+                input#NameStyle.form-control(type="text", placeholder='NameStyle', name='NameStyle')
+        div.form-group
+            label(for='Title') Title: 
+                input#Title.form-control(type="text", placeholder='Title', name='Title')
+        div.form-group
+            label(for='FirstName') FirstName: 
+                input#FirstName.form-control(type="text", placeholder='FirstName', name='FirstName')
+        div.form-group
+            label(for='MiddleName') MiddleName: 
+                input#MiddleName.form-control(type="text", placeholder='MiddleName', name='MiddleName')
+        div.form-group
+            label(for='LastName') LastName: 
+                input#LastName.form-control(type="text", placeholder='LastName', name='LastName')
+        
+        button.btn.btn-primary(type="submit", name="Grabar") Grabar

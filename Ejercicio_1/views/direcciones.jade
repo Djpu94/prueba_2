@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  h2 Direcciones
+  table
+      thead
+          tr
+            th AddressID
+            th AddressLine1
+            th AddressLine2
+            th City
+            th StateProvinceID
+            th PostalCode
+      tbody
+        each direccion in direcciones 
+          tr
+            td #{direccion.AddressID}
+            td #{direccion.AddressLine1}
+            td #{direccion.AddressLine2}
+            td #{direccion.City}
+            td #{direccion.StateProvinceID}
+            td #{direccion.PostalCode}
